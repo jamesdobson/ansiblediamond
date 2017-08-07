@@ -46,7 +46,7 @@
 
 - name: Install diamond rpm package
   yum: name={{item}} state=present
-  with_items: diamondrpmfile.stdout_lines
+  with_items: "{{ diamondrpmfile.stdout_lines }}"
 
 - name: Write version file
   copy:
