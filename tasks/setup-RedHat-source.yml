@@ -16,10 +16,10 @@
 - name: Install required devtools for building
   yum: name={{item}} state=present
   with_items:
-    - gcc
+    - make
     - rpm-build
-    - python-mock
     - python-configobj
+    - python-setuptools
     - git
     - libselinux-python
 
